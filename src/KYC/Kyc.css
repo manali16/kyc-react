@@ -1,0 +1,56 @@
+#signup-form{
+    border:1px solid;
+    padding: 17px;
+    width: fit-content;
+}
+.card-body{
+    padding: 7%;
+    text-align: -webkit-center;
+}
+.card-header{
+    text-align: center;
+    font-size: 39px;
+    font-family: sans-serif;
+    background: aliceblue;
+    margin-bottom: -24px;
+    margin-top: 38px;
+}
+.widthbox{
+    width: 100% !important;
+    text-align: -webkit-center;
+    font-variant: all-small-caps;
+}
+.btn-block {
+    display: block;
+    width: 50%;
+}
+.detailsverify{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.Imgdiv {
+    overflow: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 245px;
+    height: 200px;
+  }
+
+  input[type=file] {
+    display: block;
+    text-align-last: center;
+}
+@media only screen and (max-width: 425px) {
+    .card-header{
+        font-size: 26px !important;
+        margin-bottom: 4px !important;
+    }
+    .widthbox{
+        width: 100% !important;
+    }
+    .btn-block {
+        display: block;
+        width: 50%;
+    }
+}
