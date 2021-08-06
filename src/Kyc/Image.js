@@ -5,23 +5,23 @@ export default class Image extends React.Component {
       super(props);
       this.state = {
         images:props.Image,
+        obj:[]
       };
       this.submitForm = this.submitForm.bind(this);
-      this.editDetails = this.editDetails.bind(this);
-    }
-    editDetails(){
-      window.location.reload(false);
     }
 
-  submitForm = () => {
-console.log(this.props);
-    if (this.state.image_file !== null){
-
-        let formData = new FormData();
-        formData.append('customFile', this.props);
-        alert("user saved")
-    }
+  submitForm = async({formData = new FormData()}) => {
+  formData.append('data', this.props.cust_name);
+  formData.append('data', this.props.adharno);
+  formData.append('data', this.props.image);
+  formData.append('data', this.props.image2);
+  for(var pair of formData.entries()) {
+  console.log(pair[0]+ ', '+ pair[1]);
 }
+  alert(formData.getAll('data'));
+}
+
+
     render() {
       return (
         <>
@@ -53,5 +53,8 @@ console.log(this.props);
       )
     }
   }
+
+
+
     
 
